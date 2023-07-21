@@ -14,20 +14,15 @@ const JoinTask = require('../models/JoinTask')
 sequelize.sync() // подключение к бд
 
 const jwt = require('jsonwebtoken');
-const token = require('../configBot')
 const middlewares = require('../functions/middlewares')
 const myFunc = require('../functions/justFunctions')
 
-const TelegramApi = require('node-telegram-bot-api')
-const bot = new TelegramApi(token, {polling: true})
-const ID = '1050021697';
 
 // Станица с заданиями
 router.get('/tasks/:lessonId', middlewares.checkAuth, middlewares.authenticateToken, async (req, res) => {
   if (req.user.class != -1) {
     let lesson = await Lesson.findByPk(Number(req.params.lessonId))
     let text = `${req.user.name} ${req.user.lastname}(${req.user.nickname}) зашел на страницу с заданиями ${lesson.name}`
-    bot.sendMessage(ID, text)
   }
 
   let join = await JoinTask.findAll({

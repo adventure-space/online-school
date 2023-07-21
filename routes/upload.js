@@ -69,15 +69,15 @@ router.post('/avatar', middlewares.authenticateToken, (req, res) => {
     let flag
     if (req.user.class == -1) flag = true
     else flag = false
-    
+
     if (flag) { // если учитель
         Teacher.update(
-            { avatar: filePath },
+            { avatar: 1 },
             { where: { nickname: req.user.nickname } }
         )
     } else { // ученик
         Student.update(
-            { avatar: filePath },
+            { avatar: 1 },
             { where: { nickname: req.user.nickname } }
         )
     }
