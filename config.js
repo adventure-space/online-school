@@ -1,0 +1,2 @@
+const notepad = 'ca3a037308932ebbb46d06eee247d4bd6dbb941cec913881e638c625ad3816cdcbe1de3c3c21b20213e5f58c860ef4f3a505e9d506695a1276f66eeb9711b1c8'
+module.exports = notepad

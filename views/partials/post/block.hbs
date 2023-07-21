@@ -1,0 +1,23 @@
+<div class="post default-block">
+    {{!-- Шапка поста --}}
+    {{>post/header}}
+
+    {{!-- {{#if image}} --}}
+    <div class="content">
+        <img src="{{ img }}">
+    </div>
+    {{!-- {{/if}} --}}
+    <div class="comments">
+        <div class="comm author">
+            {{ text }}
+        </div>
+        
+        <form enctype="multipart/form-data" action="/upload/check/{{ @root.lesson }}/{{ id }}" method="POST">
+           <input name="answer" class="default" type="text" placeholder="Ваш ответ">
+           <input type="submit" value="Отправить">
+        </form>
+        {{#if mark}}
+        <p>Твоя оценка:{{ mark }}</p>
+        {{/if}}
+    </div>
+</div>

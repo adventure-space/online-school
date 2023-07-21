@@ -1,0 +1,33 @@
+<div id="modal_profile" class="modal hide">
+    {{!-- <div id="modal_profile" class="modal"> --}}
+        <div class="wrapper">
+            <div class="header">
+                <h3>Изменение профиля</h3>
+            </div>
+
+            <div class="content">
+                <section>
+                    <div class="info">Изменить фото профиля</div>
+                    <form action="/upload/avatar" ref='uploadForm' encType="multipart/form-data" method="post" id="avatar_upload">
+                        <p><input id="avatarImage" type="file" name="image" multiple accept="image/*,image/jpeg">
+                            <input id="avatar_upload_btn" type="submit" value="Отправить">
+                        </p>
+                    </form>
+                </section>
+
+                {{!-- <form action="/api/info" method="post" class="full">
+                    <section>
+                        <div class="info">Имя</div>
+                        <input id="username_edit" name="username" type="text" placeholder="Имя">
+                    </section>
+
+                    <section>
+                        <div class="info">Имя пользователя</div>
+                        <input id="nickname_edit" name="nickname" type="text" placeholder="Имя пользователя">
+                    </section>
+                    
+                    <input id="edit_profile_btn" type="submit" value="Изменить">
+                </form> --}}
+            </div>
+        </div>
+    </div>

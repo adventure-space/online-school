@@ -1,0 +1,41 @@
+<div class="profile">
+    <div class="header">
+        <div class="col-2">
+            <div class="nickname">
+                <span>{{ @root.teacher }}</span>
+            </div>
+
+            <div class="info">
+                <span>{{ lessonCount }}</span> уроков
+            </div>
+
+            <div class="name">
+                {{ @root.name }} {{ @root.lastname }}
+            </div>
+        </div>
+    </div>
+
+    {{#if error}}
+        <p class="error_text">{{message}}</p>
+    {{/if}}
+
+
+    <div id="profile_list" class="content">
+        {{!-- {{>profile/post}}
+        {{>profile/post}}
+        {{>profile/post}}
+        {{>profile/post}} --}}
+        {{#each posts}}
+
+            {{>profile/post}}
+
+            {{else}}
+            <p class="empty_text">Заданий не обнаружено</p>
+
+        {{/each}}
+    </div>
+</div>
+
+{{>full_post/modal}}
+{{>add/modal}}
+{{>change_profile/modal}}

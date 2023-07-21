@@ -1,0 +1,20 @@
+<div class="auth__block">
+    <div class="auth">
+        <h1>live-metod</h1>
+
+        <form action="/auth" method="post">
+            <input name="nickname" class="default" type="text" placeholder="Имя пользователя">
+            <input name="password" class="default" type="password" placeholder="Пароль">
+
+            {{#if error}}
+                <p class="error_text">{{message}}</p>
+            {{/if}}
+
+            <input type="submit" value="Авторизироваться">
+        </form>
+    </div>
+
+    <div class="auth mini">
+        У вас ещё нет аккаунта? <a href="/register">Зарегистрироваться</a>
+    </div>
+</div>

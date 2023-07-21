@@ -1,0 +1,24 @@
+<div class="auth__block">
+    <div class="auth">
+        <h1>live-metod</h1>
+
+        <form action="/register" method="post">
+            <input name="name" class="default" type="text" placeholder="Имя">
+            <input name="lastname" class="default" type="text" placeholder="Фамилия">
+            <input name="nickname" class="default" type="text" placeholder="Ник">
+            <input name="class" class="default" type="text" placeholder="ID твоего класса(попроси его у учителя)">
+            <input name="password" class="default" type="password" placeholder="Пароль">
+            <input name="password_second" class="default" type="password" placeholder="Пароль еще раз">
+
+            {{#if error}}
+                <p class="error_text">{{message}}</p>
+            {{/if}}
+
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </div>
+
+    <div class="auth mini">
+        Есть аккаунт? <a href="/auth">Войти</a>
+    </div>
+</div>

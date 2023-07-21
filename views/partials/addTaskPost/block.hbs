@@ -1,0 +1,22 @@
+<div class="post default-block">
+    {{!-- Шапка поста --}}
+    {{>post/header}}
+
+    {{!-- {{#if image}} --}}
+    <div class="content">
+        <img src="{{ img }}">
+    </div>
+    {{!-- {{/if}} --}}
+    <div class="comments">
+        <div class="comm author">
+            {{ text }}
+        </div>
+    </div>
+    <div id="add_task_to_lesson" class="add_lesson">
+        <form action="/upload/addTask/{{@root.lesson}}/{{id}}" method="post">
+            <button name="foo" value="upvote">
+            {{>buttons/add}}
+            </button>
+        </form>
+    </div>
+</div>

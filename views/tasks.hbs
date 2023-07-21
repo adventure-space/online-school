@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="col-2 mr20">
+        {{!-- Блок с постом --}}
+        {{!-- {{>post/block}}
+        {{>post/block}} --}}
+        {{#if teacher}}
+        <div id="add_task" class="add_lesson">
+            <a href="/addTask/{{lesson}}" class="button">
+            {{>buttons/add}} Добавить задачу в урок
+            </a>
+        </div>
+        {{/if}}
+        {{#each posts}}
+            {{>post/block}}
+
+            {{else}}
+            <p class="empty_text">Заданий не обнаружено</p>
+        {{/each}}
+    </div>
+</div>

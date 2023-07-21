@@ -1,0 +1,27 @@
+<div id="header">
+    <div class="fixed-block">
+        <div class="wrapper">
+            <a href="/" class="logo">Live-metod</a>
+
+            <div class="btns">
+                {{#if user.teacher}}
+                <div id="add" class="add">
+                    {{>buttons/add}}
+                </div>
+                {{/if}}
+
+
+
+
+                <div id="profile_button" class="profile profile_click">
+                    <img class="profile_click" src="{{ @root.avatar }}">
+
+                    <ul id="buttons_menu" class="menu hide">
+                        <a href="/"><li>{{>buttons/profile}}  Профиль</li></a>
+                        <a href="/auth/logout"><li>Выйти</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

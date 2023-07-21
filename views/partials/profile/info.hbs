@@ -1,0 +1,21 @@
+<div class="header">
+    <div class="col-1">
+        <img src="{{ @root.avatar }}">
+    </div>
+    <div class="col-2">
+        <div class="nickname">
+            <span>{{ @root.nickname }}</span>
+            
+
+            <div id="change_profile" class="btn">Редактировать профиль</div>
+        </div>
+
+        {{!-- <div class="info">
+            <span>{{ postCount }}</span> публикаций
+        </div> --}}
+
+        <div class="name">
+            {{ @root.name }} {{ @root.lastname }}
+        </div>
+    </div>
+</div>
